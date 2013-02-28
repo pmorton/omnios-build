@@ -55,7 +55,17 @@ CONFIGURE_OPTS="
     --disable-static
     --enable-fhs
     --disable-swat
+	--with-aio-support 
+	--with-winbind 
+	--with-pam
+	--with-dnsupdate 
+	--with-ads
+	--with-acls
 "
+
+CPPFLAGS="-I/usr/local/include -I/opt/omni/include -I/usr/include" and 
+LDFLAGS="-L/usr/local/lib -L/opt/omni/lib -L/usr/lib -R/usr/local/lib:/opt/omni/lib:/usr/lib". 
+
 
 service_configs() {
     logmsg "Installing SMF"
@@ -73,6 +83,7 @@ download_source $PROG $PROG $VER
 patch_source
 run_autogen
 prep_build
+CONFIGURE_OPTS=""
 build
 make_isa_stub
 service_configs
