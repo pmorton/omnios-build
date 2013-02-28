@@ -31,8 +31,7 @@
 PVER=0.151002
 
 # Which server to fetch files from
-MIRROR=mirrors.omniti.com
-
+MIRROR=swdist.s3.amazonaws.com
 # Default prefix for packages (may be overridden)
 PREFIX=/usr
 
