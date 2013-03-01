@@ -26,7 +26,7 @@ namespace :package do
 end
 
 namespace :build do
-  PACKAGES = [:samba3, 'ruby-20'.to_sym,:nano]
+  PACKAGES = [:samba4, 'ruby-20'.to_sym,:nano]
 
   PACKAGES.each do |package|
     desc "Build #{package}"
