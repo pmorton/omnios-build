@@ -38,7 +38,7 @@ DEPENDS_IPS="service/network/dns/mdns developer/build/autoconf
              system/library system/library/gcc-4-runtime system/library/math"
 PREFIX=/usr/local
 #BUILDDIR=$PROG-$VER/source3
-BUILDARCH=64
+BUILDARCH=32
 CONFIGURE_OPTS="
     --prefix=$PREFIX
     --bindir=$PREFIX/bin
@@ -51,7 +51,6 @@ CONFIGURE_OPTS="
     --localstatedir=/var
     --sharedstatedir=/var
     --bundled-libraries=ALL
-    --target=x86_64-pc-solaris2.11
     --with-winbind
     --with-ads
     --with-ldap
