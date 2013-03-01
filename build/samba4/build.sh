@@ -36,7 +36,7 @@ DESC="$SUMMARY ($VERS)"
 
 DEPENDS_IPS="service/network/dns/mdns developer/build/autoconf
              system/library system/library/gcc-4-runtime system/library/math"
-PREFIX=/opt/bia
+PREFIX=/usr/local
 #BUILDDIR=$PROG-$VER/source3
 BUILDARCH=64
 CONFIGURE_OPTS="
@@ -50,9 +50,17 @@ CONFIGURE_OPTS="
     --with-privatedir=/etc/samba/private
     --localstatedir=/var
     --sharedstatedir=/var
-    --enable-fhs
-    --with-acl
+    --bundled-libraries=ALL
     --target=x86_64-pc-solaris2.11
+    --with-winbind
+    --with-ads
+    --with-ldap
+    --with-pam
+    --with-iconv
+    --with-acl-support
+    --with-syslog
+    --with-aio-support
+    --enable-fhs
 "
 
 service_configs() {
