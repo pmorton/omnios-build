@@ -28,7 +28,7 @@
             <service_fmri value="svc:/milestone/multi-user-server" />
         </dependent>
 
-        <exec_method type="method" name="start" exec="/opt/bia/sbin/nmbd -D" timeout_seconds="170" />
+        <exec_method type="method" name="start" exec="/usr/local/sbin/nmbd -D" timeout_seconds="170" />
 
         <exec_method type="method" name="stop" exec="/usr/bin/kill `cat /var/run/samba/nmbd.pid`" timeout_seconds="60" />
 
